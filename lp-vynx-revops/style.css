@@ -91,7 +91,8 @@ img{ max-width:100%; display:block }
 .vx-footer{ border-top:1px solid rgba(255,255,255,.08); padding:24px 0; color:var(--muted); text-align:center }
 
 /* ---------- Animations (IntersectionObserver) ---------- */
-.vx-animate-up{ opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease }
+/* Visible by default; JS will still animate when present */
+.vx-animate-up{ opacity:1; transform:none; transition: opacity .6s ease, transform .6s ease }
 .vx-animate-up.vx-in{ opacity:1; transform: translateY(0) }
 @media (prefers-reduced-motion: reduce){
   .vx-animate-up{ opacity:1; transform:none }
